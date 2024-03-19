@@ -335,7 +335,7 @@
               <MiscControls></MiscControls>
               <Define>USE_HAL_DRIVER, STM32H743xx,MPL_LOG_NDEBUG=1,EMPL,MPU9250,EMPL_TARGET_STM32F4</Define>
               <Undefine></Undefine>
-              <IncludePath>..\CORE;..\USER;..\SYSTEM\delay;..\SYSTEM\sys;..\SYSTEM\usart;..\HALLIB\STM32H7xx_HAL_Driver\Inc;..\USMART;..\MALLOC;..\HARDWARE\LED;..\HARDWARE\KEY;..\HARDWARE\TIMER;..\HARDWARE\MPU;..\HARDWARE\LCD;..\HARDWARE\SDRAM;..\HARDWARE\24CXX;..\HARDWARE\IIC;..\HARDWARE\PCF8574;..\HARDWARE\QSPI;..\HARDWARE\W25QXX;..\HARDWARE\SPI;..\Middlewares\freeRTOS\portable\RVDS\ARM_CM7\r0p1;..\Middlewares\freeRTOS\include</IncludePath>
+              <IncludePath>..\CORE;..\USER;..\SYSTEM\delay;..\SYSTEM\sys;..\SYSTEM\usart;..\HALLIB\STM32H7xx_HAL_Driver\Inc;..\USMART;..\MALLOC;..\HARDWARE\LED;..\HARDWARE\KEY;..\HARDWARE\TIMER;..\HARDWARE\MPU;..\HARDWARE\LCD;..\HARDWARE\SDRAM;..\HARDWARE\24CXX;..\HARDWARE\IIC;..\HARDWARE\PCF8574;..\HARDWARE\QSPI;..\HARDWARE\W25QXX;..\HARDWARE\SPI;..\Middlewares\freeRTOS\portable\RVDS\ARM_CM7\r0p1;..\Middlewares\freeRTOS\include;..\Middlewares\testDemo</IncludePath>
             </VariousControls>
           </Cads>
           <Aads>
@@ -683,6 +683,11 @@
               <FileName>timers.c</FileName>
               <FileType>1</FileType>
               <FilePath>..\Middlewares\freeRTOS\timers.c</FilePath>
+            </File>
+            <File>
+              <FileName>freertos_demo.c</FileName>
+              <FileType>1</FileType>
+              <FilePath>..\Middlewares\testDemo\freertos_demo.c</FilePath>
             </File>
           </Files>
         </Group>

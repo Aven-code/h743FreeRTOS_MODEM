@@ -74,7 +74,7 @@
 #ifdef __cplusplus
 extern "C" {
 #endif
-
+//  typedef unsigned int uint32_t;
 /*-----------------------------------------------------------
  * Port specific definitions.
  *

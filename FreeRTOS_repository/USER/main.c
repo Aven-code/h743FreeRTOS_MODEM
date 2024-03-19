@@ -9,6 +9,8 @@
 #include "pcf8574.h"
 #include "mpu.h"
 #include "malloc.h" 
+
+#include "freertos_demo.h"
 /************************************************
  ALIENTEK 阿波罗STM32H7开发板 实验39
  内存管理实验-HAL库函数版
@@ -19,7 +21,7 @@
  作者：正点原子 @ALIENTEK
 ************************************************/
 
-const u8* SRAM_NAME_BUF[SRAMBANK]={" SRAMIN "," SRAMEX "," SRAM12 "," SRAM4  ","SRAMDTCM","SRAMITCM"};
+//const u8* SRAM_NAME_BUF[SRAMBANK]={" SRAMIN "," SRAMEX "," SRAM12 "," SRAM4  ","SRAMDTCM","SRAMITCM"};
 
 int main(void)
 {
@@ -47,7 +49,16 @@ int main(void)
 	my_mem_init(SRAM4);				        //初始化SRAM4内存池(SRAM4)
 	my_mem_init(SRAMDTCM);			        //初始化DTCM内存池(DTCM)
 	my_mem_init(SRAMITCM);			        //初始化ITCM内存池(ITCM)
-   	POINT_COLOR=RED;
+    
+    freertos_demo();
+    
+    
+    while(1)
+    {
+        
+    }
+ #if  0
+    POINT_COLOR=RED;
 	LCD_ShowString(30,20,200,16,16,"Apollo STM32H7"); 
 	LCD_ShowString(30,40,200,16,16,"MALLOC TEST");	
 	LCD_ShowString(30,60,200,16,16,"ATOM@ALIENTEK");
@@ -122,7 +133,8 @@ int main(void)
 			LCD_ShowString(30+112,236,200,16,16,paddr);	//显示TCM内存使用率 
  			LED0_Toggle;
  		}
-	}	  
+	}
+#endif    
 }
 
 

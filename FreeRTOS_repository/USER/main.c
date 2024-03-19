@@ -125,3 +125,15 @@ int main(void)
 	}	  
 }
 
+
+/*
+    创建任务和 删除任务
+
+xTaskCreate();
+
+xTaskCreateStatic();
+
+xdelete
+
+*/
+
